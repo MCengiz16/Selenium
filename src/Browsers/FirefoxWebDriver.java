@@ -9,14 +9,12 @@ public class FirefoxWebDriver {
     }
 
 
-    public static void getFirefox() {
+    public static WebDriver getFirefox() {
 
         System.setProperty("webdriver.gecko.driver", "C:\\workplace\\webdrivers\\geckodriver.exe");
         WebDriver firefox = new FirefoxDriver();
-        firefox.get("https://www.google.com");
-        System.out.println(firefox.getTitle());
-        System.out.println(firefox.getCurrentUrl());
-        firefox.quit();
+
+        return firefox;
 
 
     }
