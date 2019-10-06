@@ -22,7 +22,7 @@ public class TableSortVerify {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-       // driver.findElement(sort).click();
+        driver.findElement(sort).click();
         //driver.findElement(sort).click();
 
 
