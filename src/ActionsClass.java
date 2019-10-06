@@ -5,11 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class ActionsClass {
     public static void main(String[] args) {
         WebDriver driver=ChromeWebDriver.getChrome();
         driver.get("https://www.amazon.com");
-        WebDriverWait wait =new WebDriverWait(driver,5);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         Actions a =new Actions(driver);
 

@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 public class TableValues {
+    private static String url="https://www.cricbuzz.com/live-cricket-scorecard/22743/ind-vs-rsa-1st-test-south-africa-tour-of-india-2019";
     public static void main(String[] args) {
         WebDriver driver = ChromeWebDriver.getChrome();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("https://www.cricbuzz.com/live-cricket-scorecard/22743/ind-vs-rsa-1st-test-south-africa-tour-of-india-2019");
+        driver.get(url);
         driver.manage().window().maximize();
 
         WebElement table = driver.findElement(By.cssSelector("div[class='cb-col cb-col-100 cb-ltst-wgt-hdr']"));
@@ -34,7 +35,7 @@ public class TableValues {
         int totalInt=Integer.parseInt(total);
 
         if(totalInt==sum){
-            System.out.println("Correct");
+            System.out.println("Passed");
         }
         else{
             System.out.println("Failed");
