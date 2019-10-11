@@ -1,0 +1,12 @@
+<suite name ="mySuite">
+    <test name = "myTest">
+    <classes>
+
+        <class name = "test.first"/>
+        <class name="test.second"/>
+
+
+
+    </classes>
+    </test>
+</suite>
